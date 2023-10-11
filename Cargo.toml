@@ -1,0 +1,16 @@
+[package]
+name = "ds18b20_temperature_sensor"
+version = "0.1.0"
+authors = ["Your Name <you@example.com>"]
+edition = "2018"
+
+[features]
+default = ["host"]
+host = []
+cortex = ["cortex-m"]
+
+[dependencies]
+rand = { version = "0.8.4", features = ["host"] }
+
+[target.'cfg(target_arch="arm")'.dependencies]
+cortex-m = "0.7.3"
